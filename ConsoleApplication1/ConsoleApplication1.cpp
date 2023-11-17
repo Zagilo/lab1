@@ -295,7 +295,6 @@ int main()
     Car c;
     Fabric f;
     // Отображение меню
-
     // Считывание ввода пользователя
     char choice;
     int menu = 0;
