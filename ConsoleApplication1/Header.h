@@ -4,7 +4,7 @@
 #include <string>
 class Base {
 public:
-    vector<string> word;
+    vector <string> word;
     virtual void turn_on() {}
     virtual void recovery() {}
     virtual ~Base() = 0 {}

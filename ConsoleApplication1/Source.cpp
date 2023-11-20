@@ -79,16 +79,16 @@ public:
         cout << ' ' << endl;
     }
     bool save(const char* filename) {
-   
+
         ofstream outF(filename, ios::out | ios::binary);
 
         if (!outF)
             return false;
 
-     
+
         outF << a.word.size();
         outF << '\n';
-        
+
         for (int i = 0; i < a.word.size(); i++)
         {
             outF << a.word[i];
@@ -96,7 +96,7 @@ public:
         }
         outF << b.word.size();
         outF << '\n';
-    
+
         for (int i = 0; i < b.word.size(); i++)
         {
             outF << b.word[i];
@@ -110,21 +110,21 @@ public:
             outF << c.word[i];
             outF << '\n';
         }
-    
+
         outF.close();
 
- 
+
         return true;
     }
     bool ReadFromFile(const char* filename)
     {
-  
+
         ifstream inF(filename, ios::in | ios::binary);
 
         if (!inF)
             return false;
 
-    
+
         for (int i = 0; i < a.word.size(); i++)
         {
             a.word.pop_back();
@@ -139,7 +139,7 @@ public:
         }
         int count = 0;
         string w;
- 
+
         inF >> count;
         for (int i = 0; i < count; i++)
         {
@@ -158,10 +158,10 @@ public:
             inF >> w;
             c.word.push_back(w);
         }
-     
+
         inF.close();
         cout << "Данные восстановлены" << endl;
-     
+
         return true;
     }
     void Del(const char* filename) {
