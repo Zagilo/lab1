@@ -2,8 +2,11 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include "Header.h"
+using namespace std;
+
 class Fabric : public Base {
-public:
+public:  
     Furniture a;
     Worker b;
     Car c;
@@ -180,3 +183,4 @@ public:
         }
         cout << "Данные очищены и сохранены в файл" << endl;
     }
+};

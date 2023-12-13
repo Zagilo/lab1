@@ -2,9 +2,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+using namespace std;
 class Base {
 public:
-    vector <string> word;
+    vector<string> word;
     virtual void turn_on() {}
     virtual void recovery() {}
     virtual ~Base() = 0 {}
@@ -19,7 +20,7 @@ class Worker : public Base {
 public:
     void turn_on() {}
     bool save(const char* filename) {}
-    void recovery() {}
+    void recovery() {} 
 };
 class Car : public Base {
 public:
